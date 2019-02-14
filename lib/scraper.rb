@@ -8,6 +8,7 @@ class Scraper
     students = []
     scrape_page = inspect_page.css(".student-card")
     scrape_page.each do |student|
+      
       students << {
       :name => student.css(".student-name").text, 
       :location => student.css(".student-location").text, 
